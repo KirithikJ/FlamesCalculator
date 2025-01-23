@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>FLAMES Calculator</title>
+    
+    <style>@charset "UTF-8";
+body {
+    background-color: #ffe6f0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    text-align: center;
+    width: 400px;
+}
+
+h1 {
+    color: #ff66b2;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff66b2;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff3385;
+}
+
+a {
+    color: #ff66b2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+   </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FLAMES Calculator</h1>
+        <form action="/calculate" method="post">
+            <div class="input-group">
+                <label for="name1">Your Name:</label>
+                <input type="text" id="name1" name="name1" required>
+            </div>
+            <div class="input-group">
+                <label for="name2">Partner's Name:</label>
+                <input type="text" id="name2" name="name2" required>
+            </div>
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>
